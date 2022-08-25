@@ -1,0 +1,90 @@
+What is @RestController?
+
+it is a convenience annotation for creating Restful controllers which
+returns the response in JSON format
+
+@RestController = @Controller + @ResponseBody
+
+@Controller is used to mark a class in spring application as a controller.
+By default the response of the controller is in XML format
+@ResponseBody annotation is used in combination of controller to display or get response in JSON format
+
+URI
+====
+localhost:7878/employee/showemployee
+localhost:7878/employee/listemployee
+localhost:7878/employee/addemployee
+
+HTTP Verbs
+===========
+GET => get data
+POST => to add data
+PUT => to modify data
+delete => to delete data
+
+what is @RequestBody?
+======================
+@RequestBody annotations are used to bind HTTP Requst body with the model/domain object in the parameter
+i.e.,it carries the domain object/data to fulfill post and update requests from the code
+
+what is @PathVariable?
+===================
+@PathVariable annotation is used to read the value from the URI path
+
+what is @RequestMapping?
+=======================
+Most common annotation for writing the handler methods in MVC application using SpringMVC or SpringBootWeb
+
+what is difference between @GetMapping and @RequestMapping?
+========================================================
+1. @GetMapping is the annoation that acts as a short form of @RequestMapping 
+
+	@RequestMapping(method = RequestMethod.GET,path = "/showemployee/{id}")  = @GetMapping(""/showemployee/{id}")
+
+2. @RequestMapping is class level annotation
+    @GetMapping is method level annotation
+
+what is @SpringBootApplication?
+============================
+@SpringBootApplication = @ComponentScan + @EnableAutoConfiguration+@Configuration
+
+
+Where do you define DB configuration/properties in Spring Boot?
+
+in application.properties file we define db properties it will be under src/main/resources folder
+
+How to change the server port number in spring boot?
+
+defining property server.port = <port number> in application.properties
+
+How to identify the entity classes while integrating with data jpa in spring boot?
+
+either using schema diagram(database diagram with relationships like one to one,one to many or many to many) or class diagram(UML diagram)
+
+
+what is difference between @NotNull and @Column(nullable = false)?
+
+what is the annotation used for dependency injection (or) Inversion of Control(IOC)?
+@Autowired
+
+
+what are the two types of repositories in JPA to support CRUD operations?
+CRUDRepository
+JPARepository
+
+What is the difference between JPA and CRUD repository ?
+JPARepository = CrudRepository + PagingAndSortingRepository+QueryByExampleExecutorRepository
+CRUDRepository doesnot support PagingAndSorting
+
+which dependency is used to rebuild the springbootapplication?
+devtools
+
+
+
+
+
+
+
+
+
+
